@@ -1,0 +1,16 @@
+{
+  "name": "LUMBUNG KLIPS",
+  "short_name": "LUMBUNG KLIPS",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#091321",
+  "theme_color": "#0b1424",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
