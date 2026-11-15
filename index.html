@@ -3,109 +3,96 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#101827">
-<title>LUMBUNG KLIPS</title>
+<title>LUMBUNG KLIPS - Affiliate Command Center</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#101827;color:#f4f7fb;font-family:Arial,sans-serif}
-header{padding:22px 16px;background:#17243a;border-bottom:1px solid #34445e}
-header h1{margin:0;color:#65e6b1;font-size:24px}
-header p{margin:7px 0 0;color:#c0cadd;font-size:13px}
-main{max-width:700px;margin:auto;padding:14px}
-.notice{padding:12px;background:#26364d;border-radius:12px;font-size:12px;line-height:1.6;color:#e3eaf4}
-nav{display:flex;gap:8px;overflow:auto;padding:12px 0}
-nav button{white-space:nowrap}
-button{border:0;border-radius:10px;padding:12px 14px;background:#36c995;color:#10251f;font-weight:bold;cursor:pointer}
-button.secondary{background:#30425d;color:white}
-section{background:#19263a;border:1px solid #34445e;border-radius:15px;padding:16px;margin:13px 0;scroll-margin-top:10px}
-h2{font-size:18px;margin:0 0 14px;color:#72e5b9}
-h3{font-size:14px;color:#dce7f5}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.stat{background:#263750;border-radius:12px;padding:12px;text-align:center;font-size:12px}
-.stat strong{display:block;font-size:21px;color:#72e5b9;margin-top:7px}
-label{display:block;font-size:13px;margin:12px 0 6px;color:#c8d4e5}
-input,textarea{width:100%;padding:12px;border-radius:9px;border:1px solid #52647d;background:#101b2c;color:white;font-size:15px}
-textarea{min-height:90px;resize:vertical}
-.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.output{white-space:pre-wrap;background:#101b2c;padding:12px;border-radius:10px;margin-top:12px;line-height:1.6;font-size:13px;overflow-wrap:anywhere}
-small{color:#aebbd0}
-footer{text-align:center;padding:20px;color:#9eacc1;font-size:12px}
+body{margin:0;background:#101827;color:#f4f7fb;font-family:Arial,sans-serif;padding-bottom:35px}
+header{padding:22px 17px;background:#172438;border-bottom:1px solid #334155}
+header h1{margin:0;color:#55e0a3;font-size:23px}
+header p{margin:7px 0 0;color:#bdc9d8;font-size:13px}
+nav{display:flex;gap:7px;padding:12px;overflow-x:auto;background:#111d2d;position:sticky;top:0;z-index:5}
+nav button{white-space:nowrap;background:#26364d;color:white;border:0;border-radius:9px;padding:11px 14px;font-weight:bold}
+button:active{opacity:.75}
+main{padding:14px;max-width:750px;margin:auto}
+section{background:#19283d;border:1px solid #34445b;border-radius:14px;padding:16px;margin-bottom:15px;scroll-margin-top:75px}
+h2{font-size:18px;margin:0 0 14px;color:#55e0a3}
+p{line-height:1.5}
+.small{font-size:12px;color:#bdc9d8}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:15px}
+.stat{background:#26364d;border-radius:10px;padding:12px 8px;text-align:center}
+.stat strong{display:block;font-size:20px;color:#55e0a3}
+.stat span{font-size:11px;color:#cbd5e1}
+label{display:block;font-size:13px;margin:12px 0 6px;color:#dce8f7}
+input,textarea{width:100%;padding:12px;border:1px solid #52647c;border-radius:9px;background:#101b2b;color:white;font-size:15px}
+textarea{min-height:95px;resize:vertical}
+.action{width:100%;padding:13px;margin-top:12px;border:0;border-radius:9px;background:#20bd83;color:#071b15;font-weight:bold;font-size:15px}
+.secondary{background:#344760;color:white}
+.output{white-space:pre-wrap;background:#101b2b;padding:13px;border-radius:9px;min-height:45px;line-height:1.55;font-size:14px;overflow-wrap:anywhere;margin-top:12px}
+.notice{font-size:12px;color:#bdc9d8;line-height:1.5}
+footer{text-align:center;color:#8fa0b6;font-size:12px;padding:15px}
 </style>
 </head>
 <body>
 <header>
-<h1>🌾 LUMBUNG KLIPS</h1>
-<p>AI Affiliate Command Center · Pusat Kendali Affiliate</p>
+<h1>LK | LUMBUNG KLIPS</h1>
+<p>AI Affiliate Command Center</p>
+<p>● MODE PERINTAH</p>
 </header>
-<main>
-<div class="notice">
-<strong>STATUS MVP</strong><br>
-Dashboard ini berjalan di browser dan belum terhubung ke API Shopee atau AI eksternal. Data disimpan di browser perangkat. Jangan masukkan password atau OTP Shopee.
-</div>
-
 <nav>
 <button onclick="go('dashboard')">Dashboard</button>
-<button class="secondary" onclick="go('command')">Perintah</button>
-<button class="secondary" onclick="go('video')">Video</button>
-<button class="secondary" onclick="go('research')">Riset</button>
-<button class="secondary" onclick="go('report')">Laporan</button>
+<button onclick="go('command')">Perintah</button>
+<button onclick="go('video')">Video</button>
+<button onclick="go('research')">Riset</button>
+<button onclick="go('report')">Laporan</button>
 </nav>
-
+<main>
 <section id="dashboard">
-<h2>🏠 Pusat Kendali</h2>
-<p>Selamat datang di LUMBUNG KLIPS.</p>
+<h2>🏠 Pusat Kendali Affiliate</h2>
+<p>Dashboard mobile untuk Shopee Affiliate.</p>
+<p class="notice">Status MVP: aplikasi ini menyimpan catatan di browser perangkat. Belum terhubung ke API Shopee atau AI eksternal. Jangan masukkan password atau OTP Shopee.</p>
 <div class="stats">
-<div class="stat">Produk<strong id="pc">0</strong></div>
-<div class="stat">Ide video<strong id="ic">0</strong></div>
-<div class="stat">Komisi<strong id="cs">Rp0</strong></div>
+<div class="stat"><strong id="pc">0</strong><span>Produk</span></div>
+<div class="stat"><strong id="ic">0</strong><span>Ide video</span></div>
+<div class="stat"><strong id="cs">Rp0</strong><span>Komisi</span></div>
 </div>
-<h3>Tim kerja affiliate</h3>
-<div class="output">1. Product Research — riset produk
-2. Commission Hunter — peluang komisi
-3. Trend Hunter — ide tren konten
-4. Video Creator — naskah video
-5. Sales Analyst — analisis penjualan
-6. AI Manager — pusat koordinasi</div>
+<button class="action" onclick="go('command')">Mulai Berikan Perintah</button>
 </section>
-
 <section id="command">
-<h2>🎯 Pusat Perintah</h2>
-<label for="cmd">Tulis perintah Anda</label>
+<h2>🤖 Dashboard Perintah</h2>
+<p class="small">Tulis tugas yang ingin Anda kerjakan.</p>
+<label for="cmd">Perintah Anda</label>
 <textarea id="cmd" placeholder="Contoh: Buat 5 ide video untuk produk rak dapur minimalis"></textarea>
-<div class="actions">
-<button id="run">Jalankan</button>
-<button class="secondary" id="example">Contoh perintah</button>
-</div>
-<div class="output" id="co">Hasil perintah akan tampil di sini.</div>
+<button class="action" id="run">Jalankan Perintah</button>
+<button class="action secondary" id="example">Isi Contoh Perintah</button>
+<div class="output" id="co">Hasil perintah akan muncul di sini.</div>
 </section>
-
 <section id="video">
 <h2>🎬 Video Creator</h2>
 <label for="vn">Nama produk</label>
 <input id="vn" placeholder="Contoh: Rak dapur minimalis">
 <label for="vb">Keunggulan produk</label>
-<input id="vb" placeholder="Contoh: Hemat tempat dan mudah dibersihkan">
+<input id="vb" placeholder="Contoh: Hemat tempat dan praktis">
 <label for="va">Target pembeli</label>
 <input id="va" placeholder="Contoh: Ibu rumah tangga">
-<div class="actions"><button id="make">Buat 5 Naskah Video</button></div>
-<div class="output" id="vo">Naskah video akan tampil di sini.</div>
+<button class="action" id="make">Buat 5 Ide dan Naskah Video</button>
+<div class="output" id="vo">Hasil ide video akan muncul di sini.</div>
 </section>
-
 <section id="research">
 <h2>🔎 Riset Produk</h2>
+<p class="notice">Catat hasil riset produk affiliate Anda secara manual.</p>
 <label for="rn">Nama produk</label>
 <input id="rn" placeholder="Nama produk">
 <label for="rp">Harga produk (Rp)</label>
-<input id="rp" type="number" placeholder="Contoh: 50000">
+<input id="rp" type="number" placeholder="0">
 <label for="rr">Komisi (%)</label>
-<input id="rr" type="number" placeholder="Contoh: 10">
+<input id="rr" type="number" placeholder="0">
 <label for="rt">Catatan produk</label>
-<textarea id="rt" placeholder="Keunggulan, target pembeli, atau tautan produk"></textarea>
-<div class="actions"><button id="saveProduct">Simpan Produk</button></div>
+<textarea id="rt" placeholder="Keunggulan, target pembeli, dan catatan lainnya"></textarea>
+<button class="action" id="saveProduct">Simpan Produk</button>
 <div class="output" id="po">Belum ada produk.</div>
 </section>
-
 <section id="report">
 <h2>📊 Laporan Affiliate</h2>
 <label for="cl">Jumlah klik</label>
@@ -114,136 +101,131 @@ Dashboard ini berjalan di browser dan belum terhubung ke API Shopee atau AI ekst
 <input id="orders" type="number" placeholder="0">
 <label for="cm">Komisi tercatat (Rp)</label>
 <input id="cm" type="number" placeholder="0">
-<div class="actions"><button id="saveReport">Simpan Laporan</button></div>
+<button class="action" id="saveReport">Simpan Laporan</button>
 <div class="output" id="ro">Belum ada laporan.</div>
 </section>
-<footer>LUMBUNG KLIPS · Dashboard Affiliate Mobile</footer>
 </main>
-
+<footer>LUMBUNG KLIPS • Affiliate Command Center</footer>
 <script>
 (function(){
+"use strict";
 const el=id=>document.getElementById(id);
-
-const get=(key,fallback)=>{
+function get(key,fallback){
 try{
-const v=localStorage.getItem(key);
-return v===null?fallback:JSON.parse(v);
-}catch(e){return fallback;}
-};
-
-const put=(key,value)=>{
+const value=localStorage.getItem(key);
+return value===null?fallback:JSON.parse(value);
+}catch(error){return fallback;}
+}
+function put(key,value){
 try{
 localStorage.setItem(key,JSON.stringify(value));
 return true;
-}catch(e){
-alert('Penyimpanan browser tidak tersedia.');
+}catch(error){
+alert("Penyimpanan browser tidak tersedia.");
 return false;
 }
-};
-
-const money=v=>Number(v||0).toLocaleString('id-ID');
-
-window.go=id=>{
+}
+const money=value=>Number(value||0).toLocaleString("id-ID");
+window.go=function(id){
 const target=el(id);
-if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+if(target)target.scrollIntoView({behavior:"smooth",block:"start"});
 };
-
 function refresh(){
-const products=get('lkp',[]);
-const ideas=get('lki',0);
-const report=get('lkr',null);
-
-el('pc').textContent=products.length;
-el('ic').textContent=ideas;
-el('cs').textContent='Rp'+money(report&&report.cm);
-
-el('po').textContent=products.length
-?products.map((x,i)=>(i+1)+'. '+x.n+' | Rp'+money(x.p)+' | Komisi '+x.r+'%\n'+(x.t||'-')).join('\n\n')
-:'Belum ada produk.';
-
-el('ro').textContent=report
-?'Klik: '+report.cl+'\nPesanan: '+report.orders+'\nKomisi: Rp'+money(report.cm)+'\nKonversi: '+(report.cl?(report.orders/report.cl*100).toFixed(2):'0.00')+'%'
-:'Belum ada laporan.';
+const products=get("lkp",[]);
+const ideas=get("lki",0);
+const report=get("lkr",null);
+el("pc").textContent=products.length;
+el("ic").textContent=ideas;
+el("cs").textContent="Rp"+money(report&&report.cm);
+el("po").textContent=products.length
+?products.map((x,i)=>(i+1)+". "+x.n+" | Rp"+money(x.p)+" | Komisi "+x.r+"%\n"+(x.t||"-")).join("\n\n")
+:"Belum ada produk.";
+el("ro").textContent=report
+?"Klik: "+report.cl+"\nPesanan: "+report.orders+"\nKomisi: Rp"+money(report.cm)+"\nKonversi: "+(report.cl?(report.orders/report.cl*100).toFixed(2):"0.00")+"%"
+:"Belum ada laporan.";
 }
-
 function saveProduct(){
-const name=el('rn').value.trim();
-if(!name){alert('Isi nama produk.');return;}
-const products=get('lkp',[]);
-products.push({n:name,p:el('rp').value||0,r:el('rr').value||0,t:el('rt').value});
-if(put('lkp',products)){
-['rn','rp','rr','rt'].forEach(id=>el(id).value='');
+const name=el("rn").value.trim();
+if(!name){alert("Isi nama produk terlebih dahulu.");return;}
+const products=get("lkp",[]);
+products.push({n:name,p:el("rp").value||0,r:el("rr").value||0,t:el("rt").value});
+if(put("lkp",products)){
+["rn","rp","rr","rt"].forEach(id=>el(id).value="");
 refresh();
-alert('Produk berhasil disimpan.');
+alert("Produk berhasil disimpan.");
 }
 }
-
 function saveReport(){
 const data={
-cl:+el('cl').value||0,
-orders:+el('orders').value||0,
-cm:+el('cm').value||0
+cl:Number(el("cl").value)||0,
+orders:Number(el("orders").value)||0,
+cm:Number(el("cm").value)||0
 };
-if(put('lkr',data)){refresh();alert('Laporan disimpan.');}
+if(put("lkr",data)){
+refresh();
+alert("Laporan berhasil disimpan.");
 }
-
+}
 function makeVideo(){
-const n=el('vn').value.trim()||'produk pilihan';
-const b=el('vb').value.trim()||'manfaat praktis';
-const a=el('va').value.trim()||'calon pembeli';
+const name=el("vn").value.trim()||"produk pilihan";
+const benefit=el("vb").value.trim()||"manfaat praktis";
+const audience=el("va").value.trim()||"calon pembeli";
 const ideas=[
-['Masalah ke solusi','Tampilkan masalah yang dialami '+a+'.'],
-['Before-after','Tampilkan kondisi sebelum dan sesudah menggunakan produk.'],
-['Detail produk','Perlihatkan bahan, ukuran, bentuk, dan detail produk.'],
-['Demo penggunaan','Tunjukkan cara menggunakan produk secara nyata.'],
-['Cocok untuk siapa?','Tampilkan siapa yang paling membutuhkan produk ini.']
+["Masalah dan solusi","Tampilkan masalah yang sering dialami "+audience+"."],
+["Before dan after","Tampilkan kondisi sebelum dan sesudah menggunakan produk."],
+["Detail produk","Perlihatkan bentuk, ukuran, bahan, dan detail produk."],
+["Demo penggunaan","Tunjukkan cara menggunakan produk secara nyata."],
+["Cocok untuk siapa?","Jelaskan siapa yang paling membutuhkan produk ini."]
 ];
-el('vo').textContent='5 PILIHAN NASKAH: '+n+'\n\n'+ideas.map((x,i)=>
-(i+1)+'. '+x[0]+'\nHOOK: "Pernah mengalami masalah seperti ini?"\nADEGAN: '+x[1]+'\nPENJELASAN: Perkenalkan '+n+' dan jelaskan keunggulan faktualnya: '+b+'.\nCTA: "Cek harga dan ulasan produk di keranjang kuning."'
-).join('\n\n');
-put('lki',Number(get('lki',0))+5);
+const result="5 PILIHAN NASKAH VIDEO: "+name+"\n\n"+
+ideas.map((item,i)=>
+(i+1)+". "+item[0]+"\nHOOK: Pernah mengalami masalah seperti ini?"+
+"\nADEGAN: "+item[1]+"\nPENJELASAN: Perkenalkan "+name+" dan jelaskan keunggulan faktualnya: "+benefit+"."+
+"\nCTA: Cek harga dan ulasan produk di keranjang kuning."
+).join("\n\n");
+el("vo").textContent=result;
+put("lki",Number(get("lki",0))+5);
 refresh();
 }
-
 function runCmd(){
-const input=el('cmd').value.trim();
-const out=el('co');
-if(!input){out.textContent='Silakan tulis perintah terlebih dahulu.';return;}
-const t=input.toLowerCase();
+const input=el("cmd").value.trim();
+const output=el("co");
+if(!input){
+output.textContent="Silakan tulis perintah terlebih dahulu.";
+return;
+}
+const text=input.toLowerCase();
 const match=input.match(/produk\s+(.+?)(?:[,.]|$)/i);
-const product=match?match[1].trim():'produk pilihan';
-
-if(/ide/.test(t)&&/(video|konten|shopee)/.test(t)){
-el('vn').value=product;
+const product=match?match[1].trim():"produk pilihan";
+if(/ide/.test(text)&&/(video|konten|shopee)/.test(text)){
+el("vn").value=product;
 makeVideo();
-out.textContent='Lima ide dan naskah video sudah dibuat. Lihat bagian Video Creator.';
-go('video');
-}else if(/video|skrip|naskah|caption/.test(t)){
-el('vn').value=product;
+output.textContent="Lima ide dan naskah video berhasil dibuat. Lihat bagian Video Creator.";
+go("video");
+}else if(/video|skrip|naskah|caption/.test(text)){
+el("vn").value=product;
 makeVideo();
-go('video');
-}else if(/komisi|klik|pesanan|laporan/.test(t)){
-out.textContent='Silakan buka bagian Laporan dan masukkan data affiliate Anda.';
-go('report');
-}else if(/produk|riset|tren|viral|cari/.test(t)){
-out.textContent='Silakan buka bagian Riset untuk mencatat produk.';
-go('research');
+output.textContent="Naskah video berhasil dibuat. Lihat bagian Video Creator.";
+go("video");
+}else if(/komisi|klik|pesanan|laporan/.test(text)){
+output.textContent="Silakan buka bagian Laporan dan masukkan data affiliate Anda.";
+go("report");
+}else if(/produk|riset|tren|viral|cari/.test(text)){
+output.textContent="Silakan buka bagian Riset untuk mencatat produk.";
+go("research");
 }else{
-out.textContent='Perintah diterima. AI eksternal belum terhubung sehingga tugas otomatis belum tersedia.';
+output.textContent="Perintah diterima. Untuk saat ini AI eksternal belum terhubung, sehingga tugas otomatis dan riset Shopee belum tersedia.";
 }
 }
-
-document.addEventListener('DOMContentLoaded',function(){
-el('run').addEventListener('click',runCmd);
-el('example').addEventListener('click',()=>{
-el('cmd').value='Buat 5 ide video Shopee Affiliate untuk produk rak dapur minimalis.';
-el('co').textContent='Contoh perintah sudah diisi. Tekan Jalankan.';
+el("run").addEventListener("click",runCmd);
+el("example").addEventListener("click",function(){
+el("cmd").value="Buat 5 ide video Shopee Affiliate untuk produk rak dapur minimalis.";
+el("co").textContent="Contoh perintah sudah diisi. Tekan Jalankan Perintah.";
 });
-el('make').addEventListener('click',makeVideo);
-el('saveProduct').addEventListener('click',saveProduct);
-el('saveReport').addEventListener('click',saveReport);
+el("make").addEventListener("click",makeVideo);
+el("saveProduct").addEventListener("click",saveProduct);
+el("saveReport").addEventListener("click",saveReport);
 refresh();
-});
 })();
 </script>
 </body>
