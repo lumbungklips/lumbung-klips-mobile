@@ -2,177 +2,156 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#101827">
-<title>LUMBUNG KLIPS — Video Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c1422">
+<title>LUMBUNG KLIPS — Video Clipping Studio</title>
 <style>
-:root{--bg:#0c1422;--panel:#152238;--panel2:#1c2d46;--line:#2b405e;--mint:#63e6b4;--text:#f3f7fc;--muted:#a9b8cc;--gold:#f4c76b}
+:root{--bg:#0c1422;--panel:#152238;--panel2:#1c2d46;--line:#2b405e;--mint:#68e0b5;--gold:#f0c66b;--text:#f3f7fc;--muted:#a9b8cc;--red:#ff9b9b}
 *{box-sizing:border-box}
 body{margin:0;background:linear-gradient(180deg,#101d31,#0c1422 38%);color:var(--text);font-family:Arial,sans-serif}
-header{padding:23px 17px 18px;background:#14243a;border-bottom:1px solid var(--line)}
+header{padding:22px 17px 18px;background:#14243a;border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:12px}
-.logo{width:46px;height:46px;border-radius:13px;background:#0b1422;border:1px solid #3b5876;display:grid;place-items:center;font-size:23px}
-h1{font-size:22px;letter-spacing:.5px;margin:0;color:var(--mint)}
-header p{margin:5px 0 0;color:var(--muted);font-size:12px}
-main{max-width:760px;margin:auto;padding:13px 14px 30px}
-.notice{border:1px solid #66552d;background:#302a1c;color:#f6e5b6;border-radius:13px;padding:12px;font-size:12px;line-height:1.55}
-nav{display:flex;gap:7px;overflow:auto;padding:13px 0;position:sticky;top:0;background:#0e1929;z-index:5}
-nav button{white-space:nowrap;padding:10px 12px}
-button{border:0;border-radius:10px;padding:12px 14px;background:var(--mint);color:#09251c;font-weight:700;font-size:13px;cursor:pointer}
+.logo{width:46px;height:46px;border-radius:13px;background:#061422;border:1px solid #3b5876;display:grid;place-items:center;color:var(--mint);font-weight:900;letter-spacing:1px}
+h1{font-size:21px;letter-spacing:3px;margin:0;color:var(--mint)}
+header p{margin:6px 0 0;color:var(--muted);font-size:12px}
+main{max-width:760px;margin:auto;padding:13px 14px 32px}
+.notice{border:1px solid #66552d;background:#302a1c;color:#f6e5b6;border-radius:13px;padding:12px;font-size:12px;line-height:1.5}
+nav{display:flex;gap:7px;overflow:auto;padding:13px 0;position:sticky;top:0;background:#0c1422;z-index:5}
+button{border:0;border-radius:10px;padding:11px 13px;background:var(--mint);color:#09251c;font-weight:700;font-size:13px;white-space:nowrap}
 button.secondary{background:#2b405e;color:#f3f7fc}
-button:disabled{opacity:.55}
-section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0;scroll-margin-top:72px}
+button:disabled{opacity:.5}
+section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0;scroll-margin-top:75px}
 h2{font-size:17px;color:var(--mint);margin:0 0 12px}
-h3{font-size:14px;margin:13px 0 7px;color:#dce8f6}
+h3{font-size:14px;margin:15px 0 7px;color:#dce8f6}
 p{line-height:1.5}
 .muted,small{color:var(--muted)}
 .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-.stat{background:var(--panel2);border:1px solid #2b405e;border-radius:12px;padding:12px;font-size:12px;color:var(--muted)}
-.stat strong{display:block;color:var(--text);font-size:19px;margin-top:7px}
-.status{display:inline-block;border-radius:30px;padding:4px 9px;font-size:11px;background:#493d22;color:#f6d88f}
-.status.ok{background:#163d34;color:#8ff0c9}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.tile{background:var(--panel2);border:1px solid #2b405e;border-radius:12px;padding:12px}
+.stat{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:12px;color:var(--muted)}
+.stat strong{display:block;color:var(--text);font-size:18px;margin-top:7px}
+.status{display:inline-block;border-radius:30px;padding:4px 9px;font-size:11px;background:#493d22;color:#f6e5b6}
+.status.ok{background:#163d34;color:#a8f3d8}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px}
 .tile b{display:block;margin-bottom:5px;font-size:13px}
 .tile span{font-size:11px;color:var(--muted);line-height:1.4}
 label{display:block;font-size:12px;color:#c8d5e6;margin:12px 0 6px}
 input,textarea,select{width:100%;padding:12px;border-radius:9px;border:1px solid #526780;background:#0d192a;color:white;font-size:14px}
-textarea{min-height:78px;resize:vertical}
+textarea{min-height:90px;resize:vertical}
 .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.output{white-space:pre-wrap;background:#0d192a;border:1px solid #2b405e;padding:12px;border-radius:10px;margin-top:12px;line-height:1.55;font-size:12px;overflow-wrap:anywhere}
-.file{padding:10px 0;border-bottom:1px solid #2b405e;font-size:13px}
+.output{white-space:pre-wrap;background:#0d192a;border:1px solid var(--line);padding:12px;border-radius:10px;margin-top:12px;line-height:1.5;font-size:13px}
+.file{padding:11px 0;border-bottom:1px solid var(--line);font-size:13px;overflow-wrap:anywhere}
 .file:last-child{border:0}
+.file a{color:var(--mint)}
 footer{text-align:center;padding:20px;color:#8193aa;font-size:11px}
 @media(max-width:420px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-<header>
- <div class="brand">
-  <div class="logo">LK</div>
-  <div><h1>LUMBUNG KLIPS</h1><p>AI VIDEO CLIPPING STUDIO · MODE PERINTAH</p></div>
- </div>
-</header>
+<header><div class="brand"><div class="logo">LK</div><div><h1>LUMBUNG KLIPS</h1><p>AI VIDEO CLIPPING STUDIO · MODE PERINTAH</p></div></div></header>
 <main>
- <div class="notice"><b>STATUS STUDIO</b><br>Dashboard video clipping sedang disiapkan. Hubungkan Google Drive untuk membaca materi. Pemotongan video, subtitle otomatis, dan pemantauan TikTok belum aktif sampai mesin pemrosesnya dipasang.</div>
- <nav>
-  <button onclick="go('dashboard')">Dashboard</button>
-  <button class="secondary" onclick="go('drive')">Google Drive</button>
-  <button class="secondary" onclick="go('clip')">Video Clipper</button>
-  <button class="secondary" onclick="go('caption')">Caption</button>
-  <button class="secondary" onclick="go('monitor')">TikTok</button>
- </nav>
-
- <section id="dashboard">
-  <h2>🎬 Pusat Kendali Video</h2>
-  <p>Selamat datang di ruang kerja LUMBUNG KLIPS. Masukkan materi video ke Google Drive, lalu siapkan klip pendek untuk TikTok.</p>
-  <div class="stats">
-   <div class="stat">Materi di Drive<strong id="fileCount">Belum dicek</strong></div>
-   <div class="stat">Klip selesai<strong>0</strong></div>
-   <div class="stat">Durasi target<strong>15–20 detik</strong></div>
-   <div class="stat">Status Google Drive<strong id="driveStatus">Belum diuji</strong></div>
-  </div>
-  <h3>Alur kerja studio</h3>
-  <div class="grid">
-   <div class="tile"><b>1. Materi video</b><span>Ambil video sumber dari folder Google Drive khusus.</span></div>
-   <div class="tile"><b>2. Pilih momen</b><span>Tentukan bagian terbaik untuk klip singkat.</span></div>
-   <div class="tile"><b>3. Edit & subtitle</b><span>Tambahkan hook, isi utama, dan teks layar.</span></div>
-   <div class="tile"><b>4. Siap TikTok</b><span>Buat caption dan unggah manual ke akun TikTok.</span></div>
-  </div>
- </section>
-
- <section id="drive">
-  <h2>☁️ Google Drive — Materi Video</h2>
-  <p class="muted">Folder kerja: <b>LUMBUNG KLIPS - MATERI VIDEO</b></p>
-  <span class="status" id="driveBadge">Belum terhubung</span>
-  <div class="actions">
-   <button id="connectDrive">Hubungkan Google Drive</button>
-   <button class="secondary" id="loadFiles">Periksa Materi Video</button>
-  </div>
-  <div class="output" id="driveOutput">Belum ada pemeriksaan. Tekan “Hubungkan Google Drive” untuk memulai izin Google, atau “Periksa Materi Video” setelah konfigurasi Drive selesai.</div>
- </section>
-
- <section id="clip">
-  <h2>✂️ Video Clipper</h2>
-  <p class="muted">Ruang persiapan klip. Mesin pemotong video belum dipasang.</p>
-  <label for="sourceName">Nama file video sumber</label>
-  <input id="sourceName" placeholder="Pilih nama video dari daftar Drive">
-  <label for="duration">Durasi klip yang diinginkan</label>
-  <select id="duration"><option>15 detik</option><option selected>20 detik</option></select>
-  <label for="hook">Hook pembuka</label>
-  <textarea id="hook" placeholder="Contoh: Bagian ini jangan sampai terlewat..."></textarea>
-  <label for="mainPoint">Isi utama</label>
-  <textarea id="mainPoint" placeholder="Tuliskan inti yang ingin disampaikan"></textarea>
-  <div class="output">Status: belum dapat merender atau mengunduh video. Tahap berikutnya adalah memasang mesin pemrosesan klip.</div>
- </section>
-
- <section id="caption">
-  <h2>✍️ Caption & Naskah</h2>
-  <label for="topic">Topik klip</label>
-  <input id="topic" placeholder="Apa isi video ini?">
-  <label for="desc">Poin penting</label>
-  <textarea id="desc" placeholder="Tuliskan poin utama video"></textarea>
-  <div class="actions"><button id="makeCaption">Susun Caption</button></div>
-  <div class="output" id="captionOutput">Caption akan tampil di sini. Ini alat penyusunan teks sederhana, belum menggunakan AI eksternal.</div>
- </section>
-
- <section id="monitor">
-  <h2>📊 TikTok Monitor</h2>
-  <p class="muted">Catat metrik secara manual setelah video diposting. Koneksi otomatis ke TikTok belum tersedia.</p>
-  <label for="videoTitle">Judul / nama video</label><input id="videoTitle" placeholder="Nama klip">
-  <div class="grid">
-   <div><label for="views">Views</label><input id="views" type="number" min="0" placeholder="0"></div>
-   <div><label for="likes">Likes</label><input id="likes" type="number" min="0" placeholder="0"></div>
-  </div>
-  <div class="actions"><button id="saveMetrics">Simpan Catatan</button></div>
-  <div class="output" id="metricsOutput">Belum ada catatan metrik.</div>
- </section>
- <footer>LUMBUNG KLIPS · VIDEO CLIPPING STUDIO · Unggah TikTok dilakukan manual oleh pemilik akun.</footer>
+<div class="notice"><b>STATUS STUDIO</b><br>Dashboard ini dapat memeriksa daftar materi di Google Drive jika koneksi backend dan izin Google sudah selesai. Pembuatan/render video 15–20 detik dan pemantauan TikTok otomatis belum aktif. Jangan masukkan password, OTP, atau token Google ke kolom dashboard.</div>
+<nav>
+<button onclick="go('dashboard')">Dashboard</button>
+<button class="secondary" onclick="go('drive')">Google Drive</button>
+<button class="secondary" onclick="go('clip')">Video Clipper</button>
+<button class="secondary" onclick="go('caption')">Caption</button>
+<button class="secondary" onclick="go('monitor')">TikTok</button>
+</nav>
+<section id="dashboard">
+<h2>Pusat Kendali Video</h2>
+<p>Selamat datang di ruang kerja LUMBUNG KLIPS. Pilih materi dari folder Drive, lalu siapkan konsep klip pendek untuk diproses.</p>
+<div class="stats">
+<div class="stat">Materi di Drive<strong id="fileCount">Belum dicek</strong></div>
+<div class="stat">Klip selesai<strong>0</strong></div>
+<div class="stat">Durasi target<strong>15–20 detik</strong></div>
+<div class="stat">Status Google Drive<strong id="driveStatus">Belum diuji</strong></div>
+</div>
+<div class="grid" style="margin-top:10px">
+<div class="tile"><b>1. Materi</b><span>Ambil daftar video dari folder Google Drive milik Anda.</span></div>
+<div class="tile"><b>2. Konsep klip</b><span>Tentukan hook, bagian utama, dan ajakan bertindak.</span></div>
+<div class="tile"><b>3. Penyuntingan</b><span>Render video dan subtitle otomatis belum tersedia.</span></div>
+<div class="tile"><b>4. Publikasi</b><span>Video diposting manual ke TikTok oleh Anda.</span></div>
+</div>
+</section>
+<section id="drive">
+<h2>Google Drive</h2>
+<p class="muted">Folder tujuan: <b>LUMBUNG KLIPS - MATERI VIDEO</b></p>
+<p class="muted">Tekan tombol di bawah untuk memeriksa materi. Jika izin Google belum selesai, dashboard akan menampilkan pesan kesalahan dari backend.</p>
+<div class="actions"><button id="connectBtn" onclick="connectDrive()">Hubungkan / Beri Izin Google Drive</button><button class="secondary" id="refreshBtn" onclick="loadDrive()">Periksa Materi Drive</button></div>
+<div id="driveMessage" class="output">Status: belum diperiksa.</div>
+<div id="fileList"></div>
+</section>
+<section id="clip">
+<h2>Video Clipper — Rencana Klip</h2>
+<p class="muted">Bagian ini membantu menyusun arahan klip. Ini belum memotong atau mengekspor file video.</p>
+<label for="sourceTitle">Nama materi / topik video</label><input id="sourceTitle" placeholder="Contoh: Tips merapikan dapur">
+<label for="hook">Hook pembuka (0–3 detik)</label><textarea id="hook" placeholder="Kalimat yang membuat penonton berhenti scroll..."></textarea>
+<label for="mainPoint">Isi utama (3–16 detik)</label><textarea id="mainPoint" placeholder="Poin terpenting dari video..."></textarea>
+<label for="cta">Ajakan (16–20 detik)</label><input id="cta" placeholder="Contoh: Simpan video ini untuk dicoba nanti">
+<div class="actions"><button onclick="makePlan()">Susun Rencana Klip</button><button class="secondary" onclick="copyPlan()">Salin Rencana</button></div>
+<div id="clipOutput" class="output">Rencana klip akan tampil di sini.</div>
+</section>
+<section id="caption">
+<h2>Caption & Deskripsi</h2>
+<label for="captionTopic">Topik video</label><input id="captionTopic" placeholder="Masukkan topik video">
+<label for="captionTone">Gaya caption</label><select id="captionTone"><option value="Santai dan menarik">Santai dan menarik</option><option value="Informatif">Informatif</option><option value="Persuasif">Persuasif</option></select>
+<div class="actions"><button onclick="makeCaption()">Buat Draf Caption</button><button class="secondary" onclick="copyCaption()">Salin Caption</button></div>
+<div id="captionOutput" class="output">Draf caption akan tampil di sini.</div>
+</section>
+<section id="monitor">
+<h2>Pemantauan TikTok</h2>
+<p>Belum terhubung ke akun TikTok dan belum mengambil data tayangan, suka, komentar, atau pengikut.</p>
+<label for="views">Tayangan (isi manual)</label><input id="views" type="number" min="0" placeholder="0">
+<label for="likes">Suka</label><input id="likes" type="number" min="0" placeholder="0">
+<label for="comments">Komentar</label><input id="comments" type="number" min="0" placeholder="0">
+<div class="actions"><button onclick="saveMetrics()">Simpan Catatan Angka</button></div>
+<div id="metricsOutput" class="output">Belum ada catatan.</div>
+</section>
+<footer>LUMBUNG KLIPS · Video Studio · Data formulir disimpan di browser perangkat ini.</footer>
 </main>
 <script>
-(function(){
- const $=id=>document.getElementById(id);
- const endpoint='/.netlify/functions/drive';
- window.go=id=>{const e=$(id);if(e)e.scrollIntoView({behavior:'smooth',block:'start'});};
- $('connectDrive').addEventListener('click',()=>{location.href=endpoint+'?action=auth';});
- $('loadFiles').addEventListener('click',async()=>{
-  const out=$('driveOutput');out.textContent='Memeriksa koneksi dan folder Google Drive...';
-  try{
-   const r=await fetch(endpoint+'?action=list',{headers:{'Accept':'application/json'}});
-   const data=await r.json();
-   if(!r.ok||data.error)throw new Error(data.error||'Permintaan gagal ('+r.status+').');
-   const files=data.files||[];
-   $('fileCount').textContent=String(files.length);
-   $('driveStatus').textContent='Terhubung';
-   $('driveBadge').textContent='Terhubung';
-   $('driveBadge').className='status ok';
-   out.textContent=files.length?'Daftar materi video:\n\n'+files.map((f,i)=>(i+1)+'. '+f.name+' ('+f.mimeType+')').join('\n'):'Folder berhasil dibaca, tetapi belum ada file di dalamnya.';
-  }catch(e){
-   $('driveStatus').textContent='Perlu konfigurasi';
-   out.textContent='Belum bisa membaca folder: '+e.message+'\n\nPeriksa bahwa GOOGLE_REFRESH_TOKEN dan DRIVE_FOLDER_ID sudah diatur di Netlify. Jangan masukkan token ke kolom dashboard atau bagikan lewat chat.';
-  }
- });
- $('makeCaption').addEventListener('click',()=>{
-  const topic=$('topic').value.trim()||'video ini';
-  const desc=$('desc').value.trim();
-  $('captionOutput').textContent='HOOK: '+topic+' — simak sampai selesai!\n\nISI: '+(desc||'Tambahkan poin utama video di bagian ini.')+'\n\nCAPTION: '+topic+'. '+(desc||'Temukan hal menarik dari video ini.')+'\n\n#LumbungKlips #TikTokIndonesia #VideoPendek';
- });
- $('saveMetrics').addEventListener('click',()=>{
-  const item={title:$('videoTitle').value.trim()||'Video tanpa judul',views:+$('views').value||0,likes:+$('likes').value||0,date:new Date().toLocaleDateString('id-ID')};
-  let list=[];try{list=JSON.parse(localStorage.getItem('lk_video_metrics')||'[]');}catch(e){}
-  list.unshift(item);try{localStorage.setItem('lk_video_metrics',JSON.stringify(list));}catch(e){}
-  $('metricsOutput').textContent=list.map(x=>x.date+' · '+x.title+'\nViews: '+x.views+' | Likes: '+x.likes).join('\n\n');
- });
+const API='/ .netlify/functions/drive'.replace('/ ','/');
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+function setDriveStatus(text,ok=false){const el=document.getElementById('driveStatus');el.textContent=text;el.className=ok?'status ok':'status';}
+function connectDrive(){location.href=API+'?action=auth';}
+async function loadDrive(){
+ const msg=document.getElementById('driveMessage'),list=document.getElementById('fileList'),btn=document.getElementById('refreshBtn');
+ msg.textContent='Sedang memeriksa folder Google Drive...';list.innerHTML='';btn.disabled=true;
  try{
-  const list=JSON.parse(localStorage.getItem('lk_video_metrics')||'[]');
-  if(list.length)$('metricsOutput').textContent=list.map(x=>x.date+' · '+x.title+'\nViews: '+x.views+' | Likes: '+x.likes).join('\n\n');
- }catch(e){}
- // If Google redirects back with an OAuth code, explain that the current backend returns the token securely as a one-time response.
- if(new URLSearchParams(location.search).has('code')){
-  $('driveOutput').textContent='Google mengembalikan proses izin. Periksa respons pada halaman ini. Jika terlihat refresh_token, simpan hanya ke variabel GOOGLE_REFRESH_TOKEN di Netlify; jangan bagikan token tersebut.';
-  go('drive');
- }
-})();
+  const r=await fetch(API+'?action=list',{cache:'no-store'});const data=await r.json();
+  if(!r.ok)throw new Error(data.error||'Koneksi Drive belum berhasil.');
+  const files=Array.isArray(data.files)?data.files:[];
+  document.getElementById('fileCount').textContent=String(files.length);
+  setDriveStatus('Terhubung',true);
+  msg.textContent=files.length?`Berhasil membaca folder. Ditemukan ${files.length} file.`:'Berhasil terhubung, tetapi folder belum berisi file.';
+  list.innerHTML=files.map(f=>`<div class="file"><b>${escapeHtml(f.name||'Tanpa nama')}</b><br><small>${escapeHtml(f.mimeType||'Jenis file tidak diketahui')}</small>${f.webViewLink?`<br><a href="${safeUrl(f.webViewLink)}" target="_blank" rel="noopener">Buka di Google Drive</a>`:''}</div>`).join('');
+ }catch(e){document.getElementById('fileCount').textContent='—';setDriveStatus('Belum terhubung');msg.textContent='Belum berhasil: '+e.message+' Pastikan konfigurasi Netlify dan izin Google sudah benar.';}
+ finally{btn.disabled=false;}
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function safeUrl(s){try{const u=new URL(s);return u.protocol==='https:'?u.href:'#';}catch{return '#';}}
+function makePlan(){
+ const title=document.getElementById('sourceTitle').value.trim()||'Materi video';
+ const hook=document.getElementById('hook').value.trim()||'[Tulis hook singkat]';
+ const main=document.getElementById('mainPoint').value.trim()||'[Pilih inti informasi paling penting]';
+ const cta=document.getElementById('cta').value.trim()||'[Tambahkan ajakan]';
+ const out=`RENCANA KLIP: ${title}\n\n00:00–00:03 | HOOK\n${hook}\n\n00:03–00:16 | ISI UTAMA\n${main}\n\n00:16–00:20 | AJAKAN\n${cta}\n\nCatatan: ini naskah/rencana edit, bukan file video hasil render.`;
+ document.getElementById('clipOutput').textContent=out;localStorage.setItem('lk_clip_plan',out);
+}
+function makeCaption(){
+ const topic=document.getElementById('captionTopic').value.trim()||'video ini';
+ const tone=document.getElementById('captionTone').value;
+ const out=`${topic} — ${tone.toLowerCase()}.\n\nTonton sampai selesai dan beri tahu pendapatmu di komentar!\n\n#LumbungKlips #TipsVideo #KontenKreator`;
+ document.getElementById('captionOutput').textContent=out;localStorage.setItem('lk_caption',out);
+}
+function copyText(id){const t=document.getElementById(id).textContent;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(()=>alert('Teks berhasil disalin.')).catch(()=>alert('Tidak dapat menyalin otomatis. Silakan pilih dan salin teks.'));}else{alert('Silakan pilih dan salin teks secara manual.');}}
+function copyPlan(){copyText('clipOutput')}function copyCaption(){copyText('captionOutput')}
+function saveMetrics(){
+ const data={views:Number(document.getElementById('views').value||0),likes:Number(document.getElementById('likes').value||0),comments:Number(document.getElementById('comments').value||0),savedAt:new Date().toLocaleString('id-ID')};
+ localStorage.setItem('lk_tiktok_metrics',JSON.stringify(data));
+ document.getElementById('metricsOutput').textContent=`Catatan manual tersimpan di perangkat ini.\nTayangan: ${data.views}\nSuka: ${data.likes}\nKomentar: ${data.comments}\nWaktu catat: ${data.savedAt}`;
+}
+(function restore(){const p=localStorage.getItem('lk_clip_plan');if(p)document.getElementById('clipOutput').textContent=p;const c=localStorage.getItem('lk_caption');if(c)document.getElementById('captionOutput').textContent=c;const m=localStorage.getItem('lk_tiktok_metrics');if(m){try{const d=JSON.parse(m);document.getElementById('metricsOutput').textContent=`Catatan manual tersimpan di perangkat ini.\nTayangan: ${d.views}\nSuka: ${d.likes}\nKomentar: ${d.comments}\nWaktu catat: ${d.savedAt}`;}catch{}}})();
 </script>
 </body>
 </html>
