@@ -101,12 +101,7 @@ export default async (req) => {
         "drive_oauth_state=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0"
     });
   }
-if (!tokenResponse.ok) {
-  return json({
-    error: "Gagal memperbarui akses Google.",
-    google_error: tokens.error || "unknown",
-    google_description: tokens.error_description || "Tidak ada keterangan"
-  }, 401);
+
 }
   // 3. Membaca isi folder Google Drive
   if (action === "list") {
@@ -135,8 +130,12 @@ if (!tokenResponse.ok) {
     const tokens = await tokenResponse.json();
 
     if (!tokenResponse.ok) {
-      return json({ error: "Gagal memperbarui akses Google." }, 401);
-    }
+  return json({
+    error: "Gagal memperbarui akses Google.",
+    google_error: tokens.error || "unknown",
+    google_description: tokens.error_description || "Tidak ada keterangan"
+  }, 401);
+}
 
     const query = `'${DRIVE_FOLDER_ID}' in parents and trashed = false`;
 
