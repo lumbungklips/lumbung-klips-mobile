@@ -102,7 +102,6 @@ export default async (req) => {
     });
   }
 
-}
   // 3. Membaca isi folder Google Drive
   if (action === "list") {
     if (!GOOGLE_REFRESH_TOKEN || !DRIVE_FOLDER_ID) {
