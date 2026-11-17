@@ -89,12 +89,7 @@ export default async (req) => {
 
     const tokens = await tokenResponse.json();
 
-    if (!tokenResponse.ok) {
-      return json({
-        error: "Google gagal memberikan token.",
-        details: tokens.error_description || tokens.error
-      }, 400);
-    }
+    
 
     return json({
       message: "Otorisasi Google berhasil.",
@@ -106,7 +101,13 @@ export default async (req) => {
         "drive_oauth_state=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0"
     });
   }
-
+if (!tokenResponse.ok) {
+  return json({
+    error: "Gagal memperbarui akses Google.",
+    google_error: tokens.error || "unknown",
+    google_description: tokens.error_description || "Tidak ada keterangan"
+  }, 401);
+}
   // 3. Membaca isi folder Google Drive
   if (action === "list") {
     if (!GOOGLE_REFRESH_TOKEN || !DRIVE_FOLDER_ID) {
